@@ -112,4 +112,90 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-/*for the sticky note*/
+/*for the textaera inside the each  box*/
+function toggleTextarea(listItem) {
+    // Generate a unique ID for each list item
+    const listItemText = listItem.textContent.replace(/\s/g, '');
+    const textareaId = `textarea-${listItemText}`;
+
+    // Check if there is data saved in localStorage for this textarea
+    const savedContent = localStorage.getItem(textareaId);
+
+    // Check if a textarea with the same ID already exists
+    const existingTextarea = document.getElementById(textareaId);
+
+    if (existingTextarea) {
+        // If the textarea already exists, remove it
+        existingTextarea.parentNode.removeChild(existingTextarea);
+    } else {
+        // Create the textarea if it doesn't exist
+        const textarea = document.createElement('textarea');
+        textarea.id = textareaId;
+        textarea.placeholder = 'Start typing...';
+
+        // Add a bullet point character when creating the textarea
+        textarea.value = '\u2022 '; // Unicode bullet point character
+
+        if (savedContent) {
+            // If there is saved content, load it into the textarea
+            textarea.value += savedContent;
+        }
+
+        const textContainer = listItem.closest('.category');
+        textContainer.appendChild(textarea);
+
+        // Add an event listener to the textarea to handle changes
+        textarea.addEventListener('input', function () {
+            // Save the content to localStorage when it changes
+            localStorage.setItem(textareaId, textarea.value);
+        });
+
+        // Add an event listener to the textarea to handle Enter key presses
+        textarea.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent Enter key from creating a new line
+                textarea.value += '\n\u2022 '; // Add a new line and bullet point
+                localStorage.setItem(textareaId, textarea.value); // Save the updated content
+            }
+        });
+    }
+}
+
+/*this is for the add more button on the planner*/
+// Add an event listener to the "Add More" button
+document.querySelector('.new-item-btn').addEventListener('click', function () {
+    // Create a new div element
+    var newItemDiv = document.createElement('div');
+    newItemDiv.classList.add('planner-item');
+
+    // Create a checkbox input
+    var checkboxInput = document.createElement('input');
+    checkboxInput.type = 'checkbox';
+
+    // Create an input field for the label
+    var labelInput = document.createElement('input');
+    labelInput.type = 'text';
+    labelInput.placeholder = ''; // You can set a placeholder text
+
+    // Append the checkbox and label input to the div
+    newItemDiv.appendChild(checkboxInput);
+    newItemDiv.appendChild(labelInput);
+
+    // Append the new item div to the planner section
+    document.querySelector('.planner').appendChild(newItemDiv);
+});
+
+
+/*this is for the widget*/
+function updateTimeAndDate() {
+    const currentTime = new Date();
+    const timeString = currentTime.toLocaleTimeString();
+    const dateString = currentTime.toLocaleDateString();
+    const dateTimeString = `${dateString} ${timeString}`;
+    document.getElementById("time-and-date").innerHTML = dateTimeString;
+}
+
+setInterval(updateTimeAndDate, 1000);
+
+// Initial update
+updateTimeAndDate();

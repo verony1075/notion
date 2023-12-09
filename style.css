@@ -7,7 +7,7 @@
     margin: 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+/**/
 notepad:hover {
 transform:translateY(-15px);
 
@@ -159,6 +159,10 @@ border: 1px solid #000;
   background-color: #e8e8e8;
 
 }
+.dropdown button {
+    margin-bottom: 30px; /* Adjust the value as needed */
+}
+
 
 /* Style for the dropdown arrow */
 .dropdown .drop-btn:before {
@@ -174,7 +178,29 @@ border: 1px solid #000;
 .textarea-container {
     text-align: center;
     padding: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    resize: vertical; /* Allow vertical resizing */
 }
+
+/* Add a background color on focus */
+textarea:focus {
+    background-color: #f0f0f0;
+    outline: none;
+}
+/*the text on top of the textarea*/
+.feeling-text {
+    text-align: center;
+    padding: 6px; /* Adjust the padding as needed */
+    background-color: #E6F7FF; /* Background color */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Font weight */
+    color: #333; /* Text color */
+}
+
 
 #content {
     width: 100%;
@@ -198,6 +224,7 @@ margin-right: 30px;
 .word-count {
 	padding: 10px;
 	color: #000;
+	padding: 6px;
 	font-size: 14px;
 	margin-left: 200px;
 }
@@ -343,3 +370,50 @@ background-color:white;
   border: none;
 }
 /*for the sticky note*/
+/* Add your CSS styles here */
+/* You can customize the appearance of your clickable list items and sticky notes */
+
+.category ul li {
+    cursor: pointer;
+    color:  green;/* Customize the color as needed */
+
+    list-style: upper Roman;
+}
+
+.category ul li:hover {
+    font-weight: bold; /* Customize the hover effect */
+}
+
+
+/*for pc picture*/
+.header-image {
+    max-width: 1px; /* Adjust the maximum width as needed */
+    max-height: 1px; /* Adjust the maximum height as needed */
+}
+
+
+.pc-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    margin-right: 20px; /* Add margin for spacing */
+}
+
+
+/*this is for the time widget */
+#time-and-date {
+    width: 200px;
+    height: 200px;
+    border: dotted black;
+    background-color: #B7E4C7;
+    color: black;
+    margin-left: 45px; /* Use a colon instead of a semicolon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-family: "Franklin Gothic Medium", 'Arial Narrow', sans-serif;
+}

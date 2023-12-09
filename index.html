@@ -23,32 +23,44 @@
         <img src="imagery21.jpg" alt="the image1" width="800" height="100" class="header">
         <div class="main-content">
             <h6>Home</h6>
-            <img src="1f3e0.jpg" alt="the image2" width="70" height="60" class="home-header">
+            <img src="1f3e0.svg" alt="the image2" width="70" height="60" class="home-header">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <blockquote class="intro">
-                            <br>Plan to Succeed – for Academic Excellence.
-                        </blockquote>
-                    </div>
-                    <div class="col">
-                        <div class="goals-section">
-                            <img src="1f4ab.jpg" alt="Image Description" class="goal-image">
-                            <h3 class="goals-header">Goals</h3>
-                            <ul class="goals-list">
-                                <li>Be Productive</li>
-                                <li>Eating Healthy</li>
-                                <li>Cooking New Recipes</li>
-                                <li>Dancing Regularly</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <div class="container">
+    <div class="row">
+        <!-- First Item -->
+        <div class="col-md-4">
+            <blockquote class="intro">
+                <br>Plan to Succeed – for Academic Excellence.
+            </blockquote>
+            <img src="pcgirl.png" alt="the pc" width="120" height="60" class="pc-content">
+            <h3>Be a programmer</h3>
+        </div>
+
+        <!-- Second Item -->
+        <div class="col-md-4">
+            <div class="goals-section">
+                <img src="1f4ab.jpg" alt="Image Description" class="goal-image">
+                <h3 class="goals-header">Goals</h3>
+                <ul class="goals-list">
+                    <li>Be Productive</li>
+                    <li>Eating Healthy</li>
+                    <li>Cooking New Recipes</li>
+                    <li>Dancing Regularly</li>
+                </ul>
             </div>
+        </div>
+
+        <!-- Third Item -->
+        <div class="col-md-4">
+            <!-- Time and Date Widget -->
+            <div id="time-and-date"></div>
+        </div>
+    </div>
+</div>
+
             <div class="class-container">
                 <div class="dropdown">
-                    <button class="drop-btn">Class Schedule</button>
+                    <button class="drop-btn">Fall 2023 Class Schedule</button>
                 </div>
 
                 <!--<div class="subtitle">- Work Schedule -</div>-->
@@ -112,17 +124,17 @@
                             <div class="category">
                                 <h2>— Daily</h2>
                                 <ul>
-                                    <li>Habit Tracker</li>
-                                    <li>Language Hub</li>
-                                    <li>Workouts</li>
+                                     <li onclick="toggleTextarea(this)">Habit Tracker</li>
+                                     <li onclick="toggleTextarea(this)">Language Hub</li>
+                                     <li onclick="toggleTextarea(this)">Workout</li>
                                 </ul>
                             </div>
                             <div class="category">
                                 <h2>— Personal</h2>
                                 <ul>
-                                    <li>Shopping List</li>
-                                    <li>Budget Tracker</li>
-                                    <li>Monthly Reflection</li>
+                                    <li onclick="toggleTextarea(this)">shopping List</li>
+                                     <li onclick="toggleTextarea(this)">Badget Tracker</li>
+                                     <li onclick="toggleTextarea(this)">Monthly Reflection</li>
                                 </ul>
                             </div>
                         </div>
@@ -132,28 +144,34 @@
                             <div class="category">
                                 <h2>— Life</h2>
                                 <ul>
-                                    <li>2023 Goals</li>
-                                    <li>Bucket List</li>
-                                    <li>Internship Hunting</li>
+                                     <li onclick="toggleTextarea(this)">2023 Goals</li>
+                                     <li onclick="toggleTextarea(this)">Bucket list</li>
+                                     <li onclick="toggleTextarea(this)">Internship Hunting</li>
                                 </ul>
                             </div>
                             <div class="category">
                                 <h2>— Misc.</h2>
                                 <ul>
-                                    <li>Symbols, Emojis, & Emotions</li>
+                                    <li onclick="toggleTextarea(this)">Symbols, Emojis, & Emotions</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
                <!-- Sticky Note -->
 
 
-                <div class="textarea-container">
-                    <textarea id="content" placeholder="Start typing..."></textarea>
-                </div>
+               <div class="feeling-text">
+    <p>How Do You Feel Today?</p>
+</div>
 
-                <div class="word-count">Word Count: 0</div>
+<div class="textarea-container">
+    <textarea id="content" placeholder="Start typing..."></textarea>
+</div>
+
+<div class="word-count">Word Count: 0</div>
+
 
                 <div class="todo-container">
                     <div class="todo-header">
@@ -191,9 +209,13 @@
                         <label for="jane-street">Be positive</label>
                     </div>
                     <div>
-                        <button class="new-item-btn">Good Job</button>
+                        <button class="new-item-btn">Add More</button>
                     </div>
+
+
+
+
                     <script src="script.js"></script>
 
-</body>
+    </body>
 </html>
