@@ -1,0 +1,345 @@
+.notepad {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border: 2px solid #ccc;
+    background-color: #FDFEFE;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+notepad:hover {
+transform:translateY(-15px);
+
+}
+.scrollable-content {
+    height: 120%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#dfe6e9
+}
+.main-content{
+background-color: white;
+}
+.intro {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #333;
+    background-color: #f8f0e3;
+    border-left: 5px solid #c69c6d;
+    padding: 0px 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    max-width: 400px;
+
+}
+
+.intro a{
+margin-left:30px;
+}
+.title-bar {
+    background-color: brown;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    justify-content: space-between;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.minimize-button {
+	color: #000;
+	cursor: pointer;
+
+}
+
+.maximize-button {
+	color: black;
+	cursor: pointer;
+
+}
+
+.close-button {
+	color: black;
+	cursor: pointer;
+
+/*the is for the goal image*/
+}
+.goal-image{
+max-width: 80px;
+ margin-left: 50px
+/* for the class table*/
+}
+.class-container{
+width:80%;
+margin:0 auto;
+}
+#schedule-table {
+  width: 100%; /* Adjust as necessary */
+  border-collapse: collapse; /* Ensures borders are shared between cells */
+  table-layout: fixed; /* Optional: for equal width columns */
+}
+
+
+/* Style for both header (th) and data (td) cells */
+#schedule-table th, #schedule-table td {
+  padding: 10px; /* Consistent padding */
+  border: 1px solid #000; /* Solid black border for visibility */
+  text-align: left;
+}
+.table,th, tr{
+border: 1px solid #000;
+}
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f8f0e3;
+  }
+
+//#f2f2f2;//
+
+/* for each of the cell in the table */
+.cell-button {
+  padding: 10px; /* Consistent padding with header cells */
+  border: 91px solid #000; /* Visible border for each data cell */
+  text-align: left;
+  cursor: text; /* Indicates the cell is editable */
+  font-size: 16px; /* Adjust as needed */
+}
+.cell-button:empty:before {
+  color: black;
+
+}
+
+/*for the dropdown arrow*/
+.dropdown {
+  max-width: 300px;
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  padding: 1px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.dropdown .drop-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color:#008000;
+  border-radius: 14px;
+  font-size: 16px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #e8e8e8;
+
+}
+
+/* Style for the dropdown arrow */
+.dropdown .drop-btn:before {
+  content: '▼';
+  font-size: 12px;
+  margin-right: 5px;
+}
+.dropdown .drop-btn.expanded:after {
+ content: '▲';
+}
+
+
+.textarea-container {
+    text-align: center;
+    padding: 10px;
+}
+
+#content {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;
+}
+
+
+button:hover {
+	background-color: #0056b3;
+	transition: background-color 0.3s ease;
+}
+/* for the col of the goals */
+.goals-header{
+margin-right: 30px;
+}
+
+
+.word-count {
+	padding: 10px;
+	color: #000;
+	font-size: 14px;
+	margin-left: 200px;
+}
+
+
+#new-task {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #000;
+	margin-top: 0;
+	margin-left: 20px;
+
+}
+
+#add-task-btn {
+	padding: 10px 20px;
+	background-color: #0044cc;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+
+
+}
+
+.todo-header h2 {
+	color: #007bff;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 20px;
+
+
+}
+.todo-container{
+background-color:white;
+
+}
+
+
+
+.todo-container, .planner {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+
+/** for the planner*/
+
+.planner {
+
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #fff;
+	padding: 20px;
+
+}
+
+.planner-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.planner-icon {
+
+	width: 70px;
+	margin-right: 10px;
+
+}
+
+.planner-item {
+	margin-left: 10px;
+}
+
+.planner-title {
+
+	font-size: 24px;
+	font-weight: bold;
+	color: brown;
+}
+
+
+.planner-item input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+.new-item-btn {
+
+	padding: 8px 16px;
+	font-size: 16px;
+	background-color: #0044cc;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	align-self: flex-start;
+}
+
+.new-item-btn:hover {
+	background-color: #003399;
+	transition: background-color 0.3s ease;
+}
+
+.planner-item input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	background-color: #f0f0f0;
+	border: 1px solid #dcdcdc;
+	border-radius: 4px;
+	position: relative;
+	cursor: pointer;
+
+}
+
+
+.planner-item input[type="checkbox"]:checked {
+	background-color: #0044cc;
+}
+
+.planner-item input[type="checkbox"]:checked:after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 11px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+
+.category h2 {
+  background-color: #FFF0C2; /* A pale yellow/beige color */
+  color: #6B4F4F;
+  padding: 1px;
+  margin-top: 30;
+  margin-bottom: 10px;
+  display: block;
+  border: none;
+}
+/*for the sticky note*/
