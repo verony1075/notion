@@ -8,10 +8,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-notepad:hover {
-transform:translateY(-15px);
-
+.notepad:hover {
+  transform: translateY(-15px);
 }
+
 .scrollable-content {
     height: 120%;
     overflow-x: hidden;
@@ -84,7 +84,7 @@ button {
 	color: black;
 	cursor: pointer;
 
-/*the is for the goal image*/
+/*this is for the goal image*/
 }
 .goal-image{
 max-width: 80px;
@@ -96,16 +96,16 @@ width:80%;
 margin:0 auto;
 }
 #schedule-table {
-  width: 100%; /* Adjust as necessary */
-  border-collapse: collapse; /* Ensures borders are shared between cells */
-  table-layout: fixed; /* Optional: for equal width columns */
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 
-/* Style for both header (th) and data (td) cells */
+/* this is the Style for both header (th) and data (td) cells */
 #schedule-table th, #schedule-table td {
-  padding: 10px; /* Consistent padding */
-  border: 1px solid #000; /* Solid black border for visibility */
+  padding: 10px;
+  border: 1px solid #000;
   text-align: left;
 }
 .table,th, tr{
@@ -120,14 +120,13 @@ border: 1px solid #000;
   }
 
 
-
 /* for each of the cell in the table */
 .cell-button {
-  padding: 10px; /* Consistent padding with header cells */
-  border: 91px solid #000; /* Visible border for each data cell */
+  padding: 10px;
+  border: 91px solid #000;
   text-align: left;
-  cursor: text; /* Indicates the cell is editable */
-  font-size: 16px; /* Adjust as needed */
+  cursor: text;
+  font-size: 16px;
 }
 .cell-button:empty:before {
   color: black;
@@ -160,7 +159,7 @@ border: 1px solid #000;
 
 }
 .dropdown button {
-    margin-bottom: 30px; /* Adjust the value as needed */
+    margin-bottom: 30px;
 }
 
 
@@ -183,10 +182,10 @@ border: 1px solid #000;
     border: 1px solid #ccc;
     border-radius: 15px;
     font-size: 16px;
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
-/* Add a background color on focus */
+
 textarea:focus {
     background-color: #f0f0f0;
     outline: none;
@@ -194,11 +193,11 @@ textarea:focus {
 /*the text on top of the textarea*/
 .feeling-text {
     text-align: center;
-    padding: 6px; /* Adjust the padding as needed */
-    background-color: #E6F7FF; /* Background color */
-    font-size: 24px; /* Font size */
-    font-weight: bold; /* Font weight */
-    color: #333; /* Text color */
+    padding: 6px;
+    background-color: #E6F7FF;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
 
 
@@ -215,7 +214,7 @@ button:hover {
 	background-color: #0056b3;
 	transition: background-color 0.3s ease;
 }
-/* for the col of the goals */
+/* for the column of the goals */
 .goals-header{
 margin-right: 30px;
 }
@@ -341,8 +340,6 @@ background-color:white;
 	cursor: pointer;
 
 }
-
-
 .planner-item input[type="checkbox"]:checked {
 	background-color: #0044cc;
 }
@@ -361,7 +358,7 @@ background-color:white;
 
 
 .category h2 {
-  background-color: #FFF0C2; /* A pale yellow/beige color */
+  background-color: #FFF0C2; /* beige color */
   color: #6B4F4F;
   padding: 1px;
   margin-top: 30;
@@ -369,33 +366,31 @@ background-color:white;
   display: block;
   border: none;
 }
-/*for the sticky note*/
-/* Add your CSS styles here */
-/* You can customize the appearance of your clickable list items and sticky notes */
+/*for textarea under each item*/
+
 
 .category ul li {
     cursor: pointer;
-    color:  green;/* Customize the color as needed */
-
+    color:  green;
     list-style: upper Roman;
 }
 
 .category ul li:hover {
-    font-weight: bold; /* Customize the hover effect */
+    font-weight: bold;
 }
 
 
 /*for pc picture*/
 .header-image {
-    max-width: 1px; /* Adjust the maximum width as needed */
-    max-height: 1px; /* Adjust the maximum height as needed */
+    max-width: 1px;
+    max-height: 1px;
 }
 
 
 .pc-image {
-    max-width: 100px; /* Adjust the maximum width as needed */
-    max-height: 100px; /* Adjust the maximum height as needed */
-    margin-right: 20px; /* Add margin for spacing */
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
 }
 
 
@@ -406,7 +401,7 @@ background-color:white;
     border: dotted black;
     background-color: #B7E4C7;
     color: black;
-    margin-left: 45px; /* Use a colon instead of a semicolon */
+    margin-left: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,4 +411,26 @@ background-color:white;
     justify-content: flex-end;
     font-size: 30px;
     font-family: "Franklin Gothic Medium", 'Arial Narrow', sans-serif;
+}
+.category ul li i {
+  color: #000;
+  font-size: 1em;
+}
+
+
+/*for the next page button*/
+.next-page-link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 4px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.next-page-link:hover {
+    background-color: #0056b3;
 }

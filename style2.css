@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.study-guide {
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #333366;
+    text-align: center;
+}
+
+.section, .to-do-list {
+    margin-bottom: 20px;
+}
+
+.heading {
+    color: #6B4F4F;
+    border-bottom: 2px solid #CCC;
+    padding-bottom: 5px;
+}
+
+.bullet-points {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.editable-area, .to-do-list ul[contenteditable="true"] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 50px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+
+
+
+/*for the affirmation pictures*/
+.image-gallery {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.image-gallery .top-image {
+
+    max-width: 20%;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.top-line {
+    margin-bottom: 20px;
+    border: 0;
+    height: 4px;
+    background-color: brown;
+    width:900px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.row img {
+    width: calc(20% - 2px);
+    margin: 0 5px;
+    height: auto;
+
+}
+

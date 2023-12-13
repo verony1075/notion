@@ -10,8 +10,6 @@
 					content.value = savedText;
 			}
 			updateWordCount();
-
-		// this is the maximum is can saved on the note
 			setInterval(saveNotes, 5000);
 
 			content.addEventListener("input", () => {
@@ -52,7 +50,7 @@
 			document.querySelector(".word-count").textContent = `Word Count: ${wordCount}`;
 	}
 	document.getElementById('add-task-btn').addEventListener('click', addTask);
-// this part is for todo list
+// this part
 	function addTask() {
 			const taskText = document.getElementById('new-task').value;
 			if (!taskText) return;
@@ -71,7 +69,7 @@
 	}
 
 	document.querySelector('.close-button').addEventListener('click', function() {
-			window.close(); // Closes the current browser window/tab
+			window.close();
 	});
 
 	document.querySelector('.maximize-button').addEventListener('click', function() {
