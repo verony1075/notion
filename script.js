@@ -34,10 +34,7 @@
 					updateWordCount();
 			});
 	});
-
-
-
-	window.addEventListener("load", () => {
+window.addEventListener("load", () => {
 			const savedText = localStorage.getItem("notepadText");
 			if (savedText) {
 					content.value = savedText;
@@ -73,8 +70,8 @@
 	});
 
 	document.querySelector('.maximize-button').addEventListener('click', function() {
-			const notepad = document.querySelector('.notepad');
-			notepad.classList.toggle('maximized');
+			const notion = document.querySelector('.notion');
+			notion.classList.toggle('maximized');
 	});
 
 	document.querySelector('.minimize-button').addEventListener('click', function() {
@@ -99,10 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
   scheduleTable.style.display = 'none';
 
   dropdownButton.addEventListener('click', function() {
-    // Toggle the 'expanded' class for the button
     this.classList.toggle('expanded');
-
-    // Toggle the table visibility
     if (scheduleTable.style.display === 'none') {
       scheduleTable.style.display = 'block';
     } else {
@@ -112,74 +106,63 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /*for the textaera inside the each  box*/
 function toggleTextarea(listItem) {
-    // Generate a unique ID for each list item
+
     const listItemText = listItem.textContent.replace(/\s/g, '');
     const textareaId = `textarea-${listItemText}`;
-
-    // Check if there is data saved in localStorage for this textarea
     const savedContent = localStorage.getItem(textareaId);
 
-    // Check if a textarea with the same ID already exists
     const existingTextarea = document.getElementById(textareaId);
 
     if (existingTextarea) {
-        // If the textarea already exists, remove it
+
         existingTextarea.parentNode.removeChild(existingTextarea);
     } else {
-        // Create the textarea if it doesn't exist
+
         const textarea = document.createElement('textarea');
         textarea.id = textareaId;
         textarea.placeholder = 'Start typing...';
-
-        // Add a bullet point character when creating the textarea
-        textarea.value = '\u2022 '; // Unicode bullet point character
+        textarea.value = '\u2022 '; // Unicode  the bullet point character
 
         if (savedContent) {
-            // If there is saved content, load it into the textarea
             textarea.value += savedContent;
         }
 
         const textContainer = listItem.closest('.category');
         textContainer.appendChild(textarea);
-
-        // Add an event listener to the textarea to handle changes
         textarea.addEventListener('input', function () {
-            // Save the content to localStorage when it changes
             localStorage.setItem(textareaId, textarea.value);
         });
 
-        // Add an event listener to the textarea to handle Enter key presses
+
         textarea.addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent Enter key from creating a new line
-                textarea.value += '\n\u2022 '; // Add a new line and bullet point
-                localStorage.setItem(textareaId, textarea.value); // Save the updated content
+                event.preventDefault();
+                textarea.value += '\n\u2022 ';
+                localStorage.setItem(textareaId, textarea.value);
             }
         });
     }
 }
 
 /*this is for the add more button on the planner*/
-// Add an event listener to the "Add More" button
+
 document.querySelector('.new-item-btn').addEventListener('click', function () {
-    // Create a new div element
+
     var newItemDiv = document.createElement('div');
     newItemDiv.classList.add('planner-item');
 
-    // Create a checkbox input
+
     var checkboxInput = document.createElement('input');
     checkboxInput.type = 'checkbox';
 
-    // Create an input field for the label
+
     var labelInput = document.createElement('input');
     labelInput.type = 'text';
-    labelInput.placeholder = ''; // You can set a placeholder text
+    labelInput.placeholder = '';
 
-    // Append the checkbox and label input to the div
     newItemDiv.appendChild(checkboxInput);
     newItemDiv.appendChild(labelInput);
 
-    // Append the new item div to the planner section
     document.querySelector('.planner').appendChild(newItemDiv);
 });
 
@@ -194,6 +177,4 @@ function updateTimeAndDate() {
 }
 
 setInterval(updateTimeAndDate, 1000);
-
-// Initial update
 updateTimeAndDate();

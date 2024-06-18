@@ -29,7 +29,7 @@ body {
     background-color:#dfe6e9
 }
 .main-content{
-background-color: white;
+background-color: #f0f0f8;
 }
 .intro {
     font-family: 'Times New Roman', serif;
@@ -259,14 +259,13 @@ margin-right: 30px;
 
 }
 .todo-container{
-background-color:white;
-
+background-color:#FFF8E1;
 }
 
 
 
 .todo-container, .planner {
-    background-color: white;
+    background-color: #FFF3E0;
     padding: 20px;
     margin: 10px 0;
 }
@@ -279,7 +278,7 @@ background-color:white;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	background-color: #fff;
+	background-color: #CBB9E9;
 	padding: 20px;
 
 }
