@@ -1,82 +1,122 @@
+/* Reset default browser styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f8;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
 }
 
+/* Container for study guide */
 .study-guide {
     max-width: 800px;
-    margin: auto;
-    background-color: #ffffff;
+    margin: 20px auto;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Title styling */
 .title {
-    color: #333366;
     text-align: center;
-}
-
-.section, .to-do-list {
+    color: #333;
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
+/* Section styling */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Section headings */
 .heading {
-    color: #6B4F4F;
-    border-bottom: 2px solid #CCC;
-    padding-bottom: 5px;
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.bullet-points {
-    list-style-type: circle;
-    padding-left: 20px;
-}
-
-.editable-area, .to-do-list ul[contenteditable="true"] {
-    border: 1px solid #ccc;
+/* Editable area styling */
+.editable-area {
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 10px;
-    min-height: 50px;
     background-color: #f9f9f9;
-    border-radius: 4px;
-    margin: 10px 0;
+    min-height: 100px;
 }
 
+.editable-area ul {
+    list-style-type: none;
+    padding: 0;
+}
 
+.editable-area ul li {
+    margin-bottom: 8px;
+}
 
-
-/*for the affirmation pictures*/
+/* Image gallery container */
 .image-gallery {
-    text-align: center;
-    width: 90%;
-    margin: auto;
-    padding: 20px 0;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.image-gallery .top-image {
-
-    max-width: 20%;
-    height: auto;
-    margin: 0 auto 10px;
+/* Top image styling */
+.top-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
+/* Horizontal line */
 .top-line {
-    margin-bottom: 20px;
-    border: 0;
-    height: 4px;
-    background-color: brown;
-    width:900px;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
 }
 
+/* Row of images */
 .row {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
+
 .row img {
-    width: calc(20% - 2px);
-    margin: 0 5px;
-    height: auto;
-
+    width: calc(33.33% - 10px);
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .study-guide, .image-gallery {
+        padding: 15px;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .heading {
+        font-size: 1.3rem;
+    }
+    .row img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .row img {
+        width: 100%;
+    }
+}
